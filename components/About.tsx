@@ -9,7 +9,7 @@ const About: React.FC = () => {
           <div className="wow fadeInUp" data-wow-delay="0.2s">
             <img
               src="https://picsum.photos/800/600?random=classroom"
-              alt="Tentang Sekolah"
+              alt="Suasana belajar di salah satu ruang kelas SMP Negeri 7 Baubau"
               className="rounded-lg shadow-2xl w-full"
             />
           </div>
