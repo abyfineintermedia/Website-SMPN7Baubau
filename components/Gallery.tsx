@@ -1,15 +1,50 @@
+import React, { useState, useEffect, useRef } from 'react';
 
-import React from 'react';
+const GalleryImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
-const GalleryImage: React.FC<{ src: string; alt: string }> = ({ src, alt }) => (
-  <div className="overflow-hidden rounded-lg shadow-lg group">
-    <img
-      src={src}
-      alt={alt}
-      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-    />
-  </div>
-);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.1, // Animate when 10% of the image is visible
+      }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`overflow-hidden rounded-lg shadow-lg group transition-all duration-700 ease-out ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+      }`}
+    >
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+      />
+    </div>
+  );
+};
+
 
 const Gallery: React.FC = () => {
   const images = [
