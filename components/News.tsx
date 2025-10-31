@@ -68,10 +68,10 @@ const News: React.FC = () => {
     const articles: Article[] = [
         {
             img: 'https://picsum.photos/400/300?random=news1',
-            title: 'Siswa SMPN 7 Baubau Raih Juara 1 Olimpiade Sains Tingkat Kota',
+            title: 'Siswa SMP N 17 Baubau Raih Juara 1 Olimpiade Sains Tingkat Kota',
             excerpt: 'Prestasi membanggakan kembali diukir oleh siswa kami dalam ajang kompetisi sains bergengsi...',
             date: '15 Juli 2024',
-            fullContent: 'Prestasi membanggakan kembali diukir oleh siswa kami dalam ajang kompetisi sains bergengsi. Tim Olimpiade Sains SMPN 7 Baubau berhasil meraih Juara 1 dalam kompetisi tingkat kota yang diadakan pada tanggal 14 Juli 2024. Kemenangan ini merupakan hasil dari kerja keras siswa dan bimbingan intensif dari para guru. Kepala sekolah, Bapak Drs. H. La Ode Pendidikan, M.Pd., menyatakan rasa bangganya dan berharap prestasi ini dapat memotivasi siswa lain untuk terus berprestasi baik di bidang akademik maupun non-akademik.',
+            fullContent: 'Prestasi membanggakan kembali diukir oleh siswa kami dalam ajang kompetisi sains bergengsi. Tim Olimpiade Sains SMP N 17 Baubau berhasil meraih Juara 1 dalam kompetisi tingkat kota yang diadakan pada tanggal 14 Juli 2024. Kemenangan ini merupakan hasil dari kerja keras siswa dan bimbingan intensif dari para guru. Kepala sekolah, Bapak Drs. H. La Ode Pendidikan, M.Pd., menyatakan rasa bangganya dan berharap prestasi ini dapat memotivasi siswa lain untuk terus berprestasi baik di bidang akademik maupun non-akademik.',
             category: 'Prestasi'
         },
         {
@@ -79,15 +79,15 @@ const News: React.FC = () => {
             title: 'Peringatan Hari Kemerdekaan RI ke-79 di Sekolah Berlangsung Meriah',
             excerpt: 'Seluruh warga sekolah antusias mengikuti rangkaian acara peringatan kemerdekaan...',
             date: '17 Agustus 2024',
-            fullContent: 'Dalam rangka memperingati Hari Kemerdekaan Republik Indonesia yang ke-79, SMPN 7 Baubau mengadakan serangkaian acara yang berlangsung meriah dan penuh semangat. Acara dimulai dengan upacara bendera yang khidmat, diikuti oleh berbagai perlombaan tradisional seperti panjat pinang, balap karung, dan tarik tambang yang diikuti oleh siswa, guru, dan staf. Kegiatan ini bertujuan untuk menumbuhkan rasa nasionalisme dan mempererat tali persaudaraan di antara seluruh warga sekolah.',
+            fullContent: 'Dalam rangka memperingati Hari Kemerdekaan Republik Indonesia yang ke-79, SMP N 17 Baubau mengadakan serangkaian acara yang berlangsung meriah dan penuh semangat. Acara dimulai dengan upacara bendera yang khidmat, diikuti oleh berbagai perlombaan tradisional seperti panjat pinang, balap karung, dan tarik tambang yang diikuti oleh siswa, guru, dan staf. Kegiatan ini bertujuan untuk menumbuhkan rasa nasionalisme dan mempererat tali persaudaraan di antara seluruh warga sekolah.',
             category: 'Kegiatan Sekolah'
         },
         {
             img: 'https://picsum.photos/400/300?random=news3',
             title: 'Program Adiwiyata: Menuju Sekolah Hijau dan Berkelanjutan',
-            excerpt: 'SMPN 7 Baubau terus berupaya menciptakan lingkungan sekolah yang asri dan nyaman...',
+            excerpt: 'SMP N 17 Baubau terus berupaya menciptakan lingkungan sekolah yang asri dan nyaman...',
             date: '05 September 2024',
-            fullContent: 'Sebagai bagian dari komitmen untuk menjadi sekolah yang peduli lingkungan, SMPN 7 Baubau meluncurkan program Adiwiyata. Program ini mencakup berbagai kegiatan seperti penanaman pohon, pembuatan kompos, pengelolaan bank sampah, dan kampanye hemat energi. Diharapkan melalui program ini, kesadaran seluruh warga sekolah terhadap pentingnya menjaga kelestarian lingkungan dapat meningkat, sekaligus menciptakan lingkungan belajar yang lebih sehat, bersih, dan nyaman.',
+            fullContent: 'Sebagai bagian dari komitmen untuk menjadi sekolah yang peduli lingkungan, SMP N 17 Baubau meluncurkan program Adiwiyata. Program ini mencakup berbagai kegiatan seperti penanaman pohon, pembuatan kompos, pengelolaan bank sampah, dan kampanye hemat energi. Diharapkan melalui program ini, kesadaran seluruh warga sekolah terhadap pentingnya menjaga kelestarian lingkungan dapat meningkat, sekaligus menciptakan lingkungan belajar yang lebih sehat, bersih, dan nyaman.',
             category: 'Kegiatan Sekolah'
         },
         {
@@ -95,7 +95,7 @@ const News: React.FC = () => {
             title: 'Gelar Karya P5: Siswa Pamerkan Proyek Inovatif',
             excerpt: 'Siswa-siswi menampilkan kreativitas mereka dalam acara Gelar Karya Proyek Penguatan Profil Pelajar Pancasila...',
             date: '20 Oktober 2024',
-            fullContent: 'Acara Gelar Karya Proyek Penguatan Profil Pelajar Pancasila (P5) sukses diselenggarakan di halaman SMPN 7 Baubau. Dalam acara ini, siswa-siswi dari kelas 7 hingga 9 memamerkan berbagai proyek inovatif hasil pembelajaran mereka selama satu semester. Proyek-proyek tersebut mencakup tema-tema seperti kearifan lokal, gaya hidup berkelanjutan, dan rekayasa teknologi. Para orang tua dan tamu undangan yang hadir memberikan apresiasi tinggi terhadap kreativitas dan kemampuan presentasi para siswa.',
+            fullContent: 'Acara Gelar Karya Proyek Penguatan Profil Pelajar Pancasila (P5) sukses diselenggarakan di halaman SMP N 17 Baubau. Dalam acara ini, siswa-siswi dari kelas 7 hingga 9 memamerkan berbagai proyek inovatif hasil pembelajaran mereka selama satu semester. Proyek-proyek tersebut mencakup tema-tema seperti kearifan lokal, gaya hidup berkelanjutan, dan rekayasa teknologi. Para orang tua dan tamu undangan yang hadir memberikan apresiasi tinggi terhadap kreativitas dan kemampuan presentasi para siswa.',
             category: 'Akademik'
         },
         {
@@ -103,15 +103,15 @@ const News: React.FC = () => {
             title: 'Pelatihan Literasi Digital untuk Guru dan Siswa',
             excerpt: 'Bekerja sama dengan dinas pendidikan, sekolah mengadakan pelatihan untuk meningkatkan kecakapan digital...',
             date: '11 November 2024',
-            fullContent: 'Dalam menghadapi tantangan era digital, SMPN 7 Baubau mengadakan pelatihan literasi digital yang diikuti oleh seluruh guru dan perwakilan siswa. Pelatihan ini bertujuan untuk meningkatkan pemahaman dan keterampilan dalam memanfaatkan teknologi secara positif dan aman. Materi yang disampaikan meliputi etika berinternet, cara mengidentifikasi berita hoaks, dan pemanfaatan platform pembelajaran online. Diharapkan kegiatan ini dapat menciptakan ekosistem digital yang sehat di lingkungan sekolah.',
+            fullContent: 'Dalam menghadapi tantangan era digital, SMP N 17 Baubau mengadakan pelatihan literasi digital yang diikuti oleh seluruh guru dan perwakilan siswa. Pelatihan ini bertujuan untuk meningkatkan pemahaman dan keterampilan dalam memanfaatkan teknologi secara positif dan aman. Materi yang disampaikan meliputi etika berinternet, cara mengidentifikasi berita hoaks, dan pemanfaatan platform pembelajaran online. Diharapkan kegiatan ini dapat menciptakan ekosistem digital yang sehat di lingkungan sekolah.',
             category: 'Akademik'
         },
         {
             img: 'https://picsum.photos/400/300?random=news6',
-            title: 'Tim Futsal SMPN 7 Baubau Juarai Turnamen Antar-Sekolah',
+            title: 'Tim Futsal SMP N 17 Baubau Juarai Turnamen Antar-Sekolah',
             excerpt: 'Tim futsal kebanggaan sekolah berhasil membawa pulang trofi juara setelah mengalahkan lawan-lawannya...',
             date: '02 Desember 2024',
-            fullContent: 'Kabar gembira datang dari lapangan hijau. Tim Futsal SMPN 7 Baubau berhasil menjuarai turnamen futsal antar-sekolah se-Kota Baubau. Dalam pertandingan final yang sengit, tim kami berhasil mengalahkan SMPN 1 Baubau dengan skor tipis 3-2. Kemenangan ini adalah buah dari latihan rutin, disiplin, dan kerja sama tim yang solid. Sang kapten tim, Ahmad, dinobatkan sebagai pemain terbaik turnamen.',
+            fullContent: 'Kabar gembira datang dari lapangan hijau. Tim Futsal SMP N 17 Baubau berhasil menjuarai turnamen futsal antar-sekolah se-Kota Baubau. Dalam pertandingan final yang sengit, tim kami berhasil mengalahkan SMPN 1 Baubau dengan skor tipis 3-2. Kemenangan ini adalah buah dari latihan rutin, disiplin, dan kerja sama tim yang solid. Sang kapten tim, Ahmad, dinobatkan sebagai pemain terbaik turnamen.',
             category: 'Prestasi'
         },
     ];

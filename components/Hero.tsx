@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
       ></div>
       <div className="relative z-20 text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">
-          Selamat Datang di SMP Negeri 7 Baubau
+          Selamat Datang di SMP N 17 Baubau
         </h1>
         <p className="text-lg md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">
           Mencetak Generasi Unggul, Berkarakter, dan Berprestasi

@@ -9,14 +9,14 @@ const About: React.FC = () => {
           <div className="wow fadeInUp" data-wow-delay="0.2s">
             <img
               src="https://picsum.photos/800/600?random=classroom"
-              alt="Suasana belajar di salah satu ruang kelas SMP Negeri 7 Baubau"
+              alt="Suasana belajar di salah satu ruang kelas SMP N 17 Baubau"
               className="rounded-lg shadow-2xl w-full"
             />
           </div>
           <div className="wow fadeInUp" data-wow-delay="0.4s">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Profil SMP Negeri 7 Baubau</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Profil SMP N 17 Baubau</h2>
             <p className="text-gray-600 mb-6">
-              SMP Negeri 7 Baubau berkomitmen untuk menyediakan pendidikan berkualitas yang seimbang antara akademik, karakter, dan pengembangan minat bakat. Dengan dukungan tenaga pendidik profesional dan fasilitas yang memadai, kami siap mengantarkan siswa-siswi menjadi pribadi yang cerdas, kreatif, dan berakhlak mulia.
+              SMP N 17 Baubau berkomitmen untuk menyediakan pendidikan berkualitas yang seimbang antara akademik, karakter, dan pengembangan minat bakat. Dengan dukungan tenaga pendidik profesional dan fasilitas yang memadai, kami siap mengantarkan siswa-siswi menjadi pribadi yang cerdas, kreatif, dan berakhlak mulia.
             </p>
             <div className="space-y-4">
               <div>

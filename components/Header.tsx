@@ -69,7 +69,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <a href="#" onClick={(e) => handleNavClick(e, '#beranda')} className={`font-bold text-xl transition-colors duration-300 ${isScrolled || isMenuOpen ? 'text-blue-600' : 'text-white'}`}>
-              SMPN 7 Baubau
+              SMP N 17 Baubau
             </a>
           </div>
           <nav className="hidden md:block">
