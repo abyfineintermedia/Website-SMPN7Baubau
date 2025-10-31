@@ -1,13 +1,29 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Hero: React.FC = () => {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => {
+    // This will make the background move at half the speed of the scroll
+    setOffsetY(window.scrollY * 0.5);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section id="beranda" className="relative h-screen flex items-center justify-center text-white">
+    <section id="beranda" className="relative h-screen flex items-center justify-center text-white overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://picsum.photos/1920/1080?random=school&blur=1')" }}
+        style={{
+          backgroundImage: "url('https://picsum.photos/1920/1080?random=school&blur=1')",
+          transform: `translateY(${offsetY}px)`,
+        }}
       ></div>
       <div className="relative z-20 text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight drop-shadow-lg">

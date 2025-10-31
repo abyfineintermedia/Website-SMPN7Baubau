@@ -1,17 +1,85 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-const AchievementCard: React.FC<{ icon: React.ReactNode; title: string; year: string; description: string }> = ({ icon, title, year, description }) => (
-  <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex items-start space-x-4 transform hover:-translate-y-2 transition-transform duration-300">
-    <div className="flex-shrink-0 bg-yellow-100 text-yellow-600 p-3 rounded-full">
-      {icon}
+// A reusable component for the count-up animation
+const AnimatedCounter: React.FC<{ endValue: number; duration?: number }> = ({ endValue, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const frameRate = 1000 / 60; // 60fps
+  const totalFrames = Math.round(duration / frameRate);
+
+  useEffect(() => {
+    let frame = 0;
+    const counter = setInterval(() => {
+      frame++;
+      const progress = frame / totalFrames;
+      // Use an easing function for a smoother effect
+      const easedProgress = 1 - Math.pow(1 - progress, 3); 
+      const newCount = Math.round(endValue * easedProgress);
+      
+      setCount(newCount);
+
+      if (frame === totalFrames) {
+        clearInterval(counter);
+        // Ensure final value is exact
+        setCount(endValue);
+      }
+    }, frameRate);
+
+    return () => clearInterval(counter);
+  }, [endValue, duration, totalFrames]);
+
+  return <>{count}</>;
+};
+
+const AchievementCard: React.FC<{ icon: React.ReactNode; title: string; year: string; description: string }> = ({ icon, title, year, description }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const yearNumber = parseInt(year);
+  const isNumericYear = !isNaN(yearNumber);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.2, // Start animation when 20% of the card is visible
+      }
+    );
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={ref} className="bg-white p-6 rounded-lg shadow-lg border border-gray-100 flex items-start space-x-4 transform hover:-translate-y-2 transition-transform duration-300">
+      <div className="flex-shrink-0 bg-yellow-100 text-yellow-600 p-3 rounded-full">
+        {icon}
+      </div>
+      <div>
+        <p className="text-sm font-semibold text-gray-500 min-h-[20px]">
+          {isVisible && isNumericYear ? (
+            <AnimatedCounter endValue={yearNumber} />
+          ) : (
+            year
+          )}
+        </p>
+        <h3 className="text-lg font-bold text-gray-800 mb-1">{title}</h3>
+        <p className="text-gray-600 text-sm">{description}</p>
+      </div>
     </div>
-    <div>
-      <p className="text-sm font-semibold text-gray-500">{year}</p>
-      <h3 className="text-lg font-bold text-gray-800 mb-1">{title}</h3>
-      <p className="text-gray-600 text-sm">{description}</p>
-    </div>
-  </div>
-);
+  );
+};
 
 
 const Achievements: React.FC = () => {
